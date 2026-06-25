@@ -140,10 +140,14 @@ gap:40px;
 align-items:center;
 }
 
-.featured img{
-width:100%;
-border-radius:20px;
-box-shadow:0 20px 40px rgba(0,0,0,.1);
+.featured > img{
+  width:320px;
+  height:320px;
+  border-radius:50%;
+  object-fit:cover;
+  border:4px solid #d4af37;
+  box-shadow:0 10px 25px rgba(0,0,0,.15);
+  margin:auto;
 }
 
 .featured-text{
@@ -277,17 +281,6 @@ border-radius:8px;
   margin-bottom:60px;
 }
 
-.featured-img{
-  width: 320px;
-  height: 320px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid #d4af37;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-  display: block;
-  margin: 0 auto;
-}
-
 /* VALUES */
 
 .values{
@@ -361,7 +354,7 @@ Piezas únicas hechas a mano inspiradas en la naturaleza,
 la creatividad y el diseño artesanal.
 </p>
 
-<a href="#catalogo" class="btn">
+<a href="#coleccion" class="btn">
 Ver Colección
 </a>
 
