@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- 🏠 Inicio -->
+  <url>
+    <loc>https://gloriacitizen00-dev.github.io/macrame/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- 🧾 About -->
+  <url>
+    <loc>https://gloriacitizen00-dev.github.io/macrame/about.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 💎 Joyería -->
+  <url>
+    <loc>https://gloriacitizen00-dev.github.io/macrame/joyeria-macrame-costa-rica.html</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 👜 Bolsos -->
+  <url>
+    <loc>https://gloriacitizen00-dev.github.io/macrame/bolsos-macrame-costa-rica.html</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 🏡 Decoración -->
+  <url>
+    <loc>https://gloriacitizen00-dev.github.io/macrame/decoracion-macrame-costa-rica.html</loc>
+    <priority>0.9</priority>
+  </url>
+
+</urlset>
