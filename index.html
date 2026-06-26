@@ -179,6 +179,7 @@ justify-content:center;
 align-items:center;
 text-align:center;
 padding:20px;
+position:relative;
 }
 
 .hero-content{
@@ -451,6 +452,36 @@ border-top:1px solid rgba(0,0,0,.08);
   font-size:3.2rem;
 }
 
+ .seo-nav{
+  position:absolute;
+  top:20px;
+  left:50%;
+  transform:translateX(-50%);
+  display:flex;
+  gap:28px;
+  padding:12px 25px;
+  background:rgba(255,255,255,0.85);
+  backdrop-filter: blur(10px);
+  border-radius:50px;
+  box-shadow:0 8px 25px rgba(0,0,0,0.15);
+  z-index:10;
+}
+
+.seo-nav a{
+  text-decoration:none;
+  font-family:'Cinzel', serif;
+  font-size:0.95rem;
+  font-weight:600;
+  color:#d4af37;
+  transition:0.3s;
+  white-space:nowrap;
+}
+
+.seo-nav a:hover{
+  color:#b8912e;
+  transform:translateY(-2px);
+} 
+  
 </style>
 
 </head>
@@ -460,9 +491,11 @@ border-top:1px solid rgba(0,0,0,.08);
 <header class="hero">
 
 <nav class="seo-nav">
-  <a href="/joyeria-macrame-costa-rica">Joyería</a>
-  <a href="/bolsos-macrame-costa-rica">Bolsos</a>
-  <a href="/decoracion-macrame-costa-rica">Decoración</a>
+  <a href="/macrame/">Inicio</a>
+  <a href="/joyeria-macrame-costa-rica.html">Joyería</a>
+  <a href="/bolsos-macrame-costa-rica.html">Bolsos</a>
+  <a href="/decoracion-macrame-costa-rica.html">Decoración</a>
+  <a href="/about.html">Sobre nosotros</a>
 </nav>
 
 <div class="hero-content">
