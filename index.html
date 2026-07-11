@@ -1813,6 +1813,269 @@ Hasta 1000px
 
 
 }
+
+/*==================================================
+HEADER MOBILE FIX
+==================================================*/
+
+
+.logo img{
+
+    width:68px;
+    height:68px;
+    object-fit:cover;
+    flex-shrink:0;
+
+}
+
+
+
+/* TABLET */
+
+@media(max-width:1000px){
+
+
+.nav-container{
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+
+.menu{
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    width:100%;
+
+}
+
+
+.menu a{
+
+    white-space:nowrap;
+
+}
+
+
+
+.hero{
+
+    padding-top:180px;
+
+}
+
+
+
+.hero-image img{
+
+    width:300px;
+
+    height:300px;
+
+}
+
+
+
+.logo{
+
+    justify-content:center;
+
+}
+
+
+}
+
+
+
+/* CELULAR */
+
+@media(max-width:600px){
+
+
+header{
+
+    min-height:auto;
+
+}
+
+
+
+/* LOGO */
+
+
+.logo{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+
+.logo img{
+
+    width:75px;
+
+    height:75px;
+
+}
+
+
+.logo span{
+
+    font-size:1rem;
+
+}
+
+
+
+/* NAV */
+
+.nav-container{
+
+    width:100%;
+
+    padding:15px;
+
+}
+
+
+
+.menu{
+
+    display:flex;
+
+    width:100%;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+
+
+.menu a{
+
+    font-size:.72rem;
+
+}
+
+
+
+/* BOTON WHATSAPP */
+
+
+.nav-container .btn{
+
+    width:90%;
+
+    max-width:280px;
+
+}
+
+
+
+/* HERO */
+
+.hero{
+
+    width:92%;
+
+    padding-top:230px;
+
+}
+
+
+
+.hero-text h1{
+
+    font-size:2.2rem;
+
+}
+
+
+.hero-text p{
+
+    font-size:.95rem;
+
+}
+
+
+
+.hero-image img{
+
+    width:230px;
+
+    height:230px;
+
+}
+
+
+}
+
+/*==================================================
+FIX CIRCULAR IMAGES MOBILE
+==================================================*/
+
+
+.product-card img,
+.hero-image img,
+.feature-banner img,
+.about-brand img{
+
+    aspect-ratio:1 / 1;
+
+    object-fit:cover;
+
+}
+
+
+/* PRODUCTOS CELULAR */
+
+@media(max-width:600px){
+
+
+.product-card img{
+
+    width:220px;
+
+    height:220px;
+
+    aspect-ratio:1 / 1;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+}
+
+
+.hero-image img{
+
+    width:230px;
+
+    height:230px;
+
+    aspect-ratio:1 / 1;
+
+    border-radius:50%;
+
+}
+
+
+}
      
 </style>
   <body>
