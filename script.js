@@ -170,7 +170,7 @@ form?.addEventListener("submit", async(e)=>{
 
 
        const scriptURL =
-"https://script.google.com/macros/s/AKfycbygLeOJ7FRFudxI6nXZzKWjroo5MnXuRh7XClKX1NZmbqsdWIlPN3zxgPlvbvOEn-CSwQ/exec";
+       "https://script.google.com/macros/s/AKfycbygLeOJ7FRFudxI6nXZzKWjroo5MnXuRh7XClKX1NZmbqsdWIlPN3zxgPlvbvOEn-CSwQ/exec";
 
 
         await fetch(scriptURL,{
