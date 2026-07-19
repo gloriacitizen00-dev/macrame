@@ -64,6 +64,31 @@ body {
     margin: 10px auto 15px;
 }
 
+.venado-container{
+    width:100%;
+    overflow:hidden;
+    position:relative;
+}
+
+
+.venado{
+    position:relative;
+    animation:correrVenado 18s linear infinite;
+}
+
+
+@keyframes correrVenado{
+
+    from{
+        transform:translateX(-250px);
+    }
+
+    to{
+        transform:translateX(100vw);
+    }
+
+}
+
 
 /* SUBTITULO */
 
@@ -270,10 +295,14 @@ body {
 
     <h1>Artesanías Cola Blanca</h1>
 
+<div class="venado-container">
+
     <img 
     src="white_deer.svg" 
     alt="Logo Artesanías Cola Blanca"
-    class="logo">
+    class="logo venado">
+
+</div>
 
     <p>100% costarricense</p>
 
