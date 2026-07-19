@@ -275,20 +275,23 @@ body {
 
 
 .venado-movimiento{
-
     width:100%;
-
-    height:180px;
-
+    height:300px;
     overflow:hidden;
+}
+
+    .fila-venados{
 
     display:flex;
 
-    align-items:center;
+    gap:100px;
 
-    gap:80px;
+    width:max-content;
+
+    animation:desfileVenados 25s linear infinite;
 
 }
+
 
 
 .venado{
@@ -297,25 +300,18 @@ body {
 
     flex-shrink:0;
 
-    animation:moverVenados 15s linear infinite;
-
 }
 
 
 
-@keyframes moverVenados{
+@keyframes desfileVenados{
 
     from{
-
-        transform:translateX(-100vw);
-
+        transform:translateX(0);
     }
 
-
     to{
-
-        transform:translateX(100vw);
-
+        transform:translateX(-50%);
     }
 
 }
@@ -379,16 +375,25 @@ body {
 
 </nav>
 
-<section class="inspiracion">
-
 <div class="venado-movimiento">
 
+<div class="fila-venados">
+
     <img src="white_deer.svg" class="venado">
     <img src="white_deer.svg" class="venado">
     <img src="white_deer.svg" class="venado">
     <img src="white_deer.svg" class="venado">
     <img src="white_deer.svg" class="venado">
     <img src="white_deer.svg" class="venado">
+
+    <img src="white_deer.svg" class="venado">
+    <img src="white_deer.svg" class="venado">
+    <img src="white_deer.svg" class="venado">
+    <img src="white_deer.svg" class="venado">
+    <img src="white_deer.svg" class="venado">
+    <img src="white_deer.svg" class="venado">
+
+</div>
 
 </div>
 
