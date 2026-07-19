@@ -286,35 +286,39 @@ body {
 
     align-items:center;
 
+    gap:80px;
+
 }
 
 
 .venado{
 
-    width:150px;
-    position:relative;
-    animation:correrVenado 12s linear infinite;
+    width:260px;
+
+    flex-shrink:0;
+
+    animation:moverVenados 15s linear infinite;
 
 }
 
 
-@keyframes correrVenado{
+
+@keyframes moverVenados{
 
     from{
 
-        transform:translateX(-200);
+        transform:translateX(-100vw);
 
     }
 
 
     to{
 
-        transform:translateX(calc(100vw));
+        transform:translateX(100vw);
 
     }
 
 }
-
 
 
 .inspiracion h2{
@@ -377,14 +381,14 @@ body {
 
 <section class="inspiracion">
 
-    <div class="venado-container">
+<div class="venado-movimiento">
 
-        <img 
-        src="white_deer.svg" 
-        alt="Venado cola blanca"
-        class="venado">
+    <img src="white_deer.svg" class="venado">
+    <img src="white_deer.svg" class="venado">
+    <img src="white_deer.svg" class="venado">
+    <img src="white_deer.svg" class="venado">
 
-    </div>
+</div>
 
     <h2>Conectados con la naturaleza</h2>
 
