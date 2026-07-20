@@ -368,6 +368,48 @@ body {
     margin:60px auto;
 
 }
+
+.carrito{
+
+    position:fixed;
+
+    top:0;
+
+    right:-400px;
+
+    width:350px;
+
+    height:100vh;
+
+    background:white;
+
+    box-shadow:-5px 0 20px rgba(0,0,0,.2);
+
+    transition:.35s;
+
+    z-index:999;
+
+    padding:25px;
+
+}
+
+.carrito.abierto{
+
+    right:0;
+
+}
+
+.carrito-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:25px;
+
+}
     
 </style>
 </head>
@@ -414,6 +456,10 @@ body {
 
     <a href="https://www.instagram.com/artesaniascola_blanca/">
         <span class="heart">♡</span>Instagram
+    </a>
+
+        <a href="#" id="abrir-carrito">
+        🛒 <span id="contador-carrito">0</span>
     </a>
 
 </nav>
@@ -489,6 +535,42 @@ body {
 
 </footer>
 
+<div id="carrito" class="carrito">
+
+    <div class="carrito-header">
+
+        <h2>Mi carrito</h2>
+
+        <button id="cerrar-carrito">✕</button>
+
+    </div>
+
+    <div id="lista-carrito">
+
+        Tu carrito está vacío.
+
+    </div>
+
+</div>
+
+    
+ <script>
+
+const carrito=document.getElementById("carrito");
+
+document.getElementById("abrir-carrito").onclick=()=>{
+
+    carrito.classList.add("abierto");
+
+}
+
+document.getElementById("cerrar-carrito").onclick=()=>{
+
+    carrito.classList.remove("abierto");
+
+}
+
+</script>   
 
 </body>
 
