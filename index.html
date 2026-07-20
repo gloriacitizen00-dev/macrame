@@ -479,8 +479,13 @@ body {
 
             <h3>Producto artesanal</h3>
 
-            <button>Ver producto</button>
-
+            <button
+                class="agregar"
+                data-nombre="Producto artesanal"
+                data-precio="25000">
+                Agregar al carrito
+            </button>
+       
         </div>
 
 
@@ -570,8 +575,26 @@ document.getElementById("cerrar-carrito").onclick=()=>{
 
 }
 
-</script>   
 
+ const botones = document.querySelectorAll(".agregar");
+
+botones.forEach(boton => {
+
+    boton.onclick = () => {
+
+        const nombre = boton.dataset.nombre;
+        const precio = boton.dataset.precio;
+
+        document.getElementById("lista-carrito").innerHTML += `
+            <p>${nombre}<br>₡${precio}</p>
+        `;
+
+    };
+
+});     
+
+</script>   
+      
 </body>
 
 </html>
