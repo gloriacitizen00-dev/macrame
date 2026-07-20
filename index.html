@@ -583,25 +583,16 @@ document.getElementById("cerrar-carrito").onclick=()=>{
 
 }
 
-
- const botones = document.querySelectorAll(".agregar");
-
-console.log(botones);
-
 botones.forEach(boton => {
 
     boton.onclick = () => {
 
-        const nombre = boton.dataset.nombre;
-        const precio = boton.dataset.precio;
-
-        document.getElementById("lista-carrito").innerHTML += `
-            <p>${nombre}<br>₡${precio}</p>
-        `;
+        alert("El botón funciona");
 
     };
 
-});     
+});
+
 
 </script>   
       
