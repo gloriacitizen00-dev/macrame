@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gloriacitizen00-dev.github.io/macrame/sitemap.xml
