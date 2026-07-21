@@ -700,6 +700,14 @@ footer{
             
     <h3>Estrella Natural</h3>
 
+    <p class="descripcion-producto">
+        Hecho artesanalmente con dedicación y materiales seleccionados.
+    </p>
+
+    <p class="disponible">
+        ✓ Disponible por encargo
+    </p>
+
     <p class="precio">₡2500</p>
 
     <button
@@ -709,12 +717,12 @@ footer{
         Agregar al carrito
     </button>
 
-    <a 
-        class="whatsapp-btn"
-        href="https://wa.me/50664448517?text=Hola,%20me%20interesa%20la%20Estrella%20de%20Macram%C3%A9."
-        target="_blank">
-        Pedir por WhatsApp
-    </a>
+<a 
+    class="whatsapp-btn"
+    href="#"
+    target="_blank">
+    💬 Pedir por WhatsApp
+</a>
 
 </div>
 
@@ -730,6 +738,14 @@ footer{
 
             <h3>Aretes Boho</h3>
 
+    <p class="descripcion-producto">
+        Hecho artesanalmente con dedicación y materiales seleccionados.
+    </p>
+
+    <p class="disponible">
+        ✓ Disponible por encargo
+    </p>
+
             <p class="precio">₡2500</p>
 
             <button
@@ -738,6 +754,13 @@ footer{
                 data-precio="2500">
                 Agregar al carrito
             </button>
+
+            <a 
+    class="whatsapp-btn"
+    href="#"
+    target="_blank">
+    💬 Pedir por WhatsApp
+</a>
        
 
         </div>
@@ -753,6 +776,14 @@ footer{
      height="400">
 
             <h3>Bolso Rosado Macramé</h3>
+
+    <p class="descripcion-producto">
+        Hecho artesanalmente con dedicación y materiales seleccionados.
+    </p>
+
+    <p class="disponible">
+        ✓ Disponible por encargo
+    </p>
             
             <p class="precio">₡9000</p>
 
@@ -762,7 +793,13 @@ footer{
                 data-precio="9000">
                 Agregar al carrito
             </button>
-       
+
+            <a 
+    class="whatsapp-btn"
+    href="#"
+    target="_blank">
+    💬 Pedir por WhatsApp
+</a>
 
         </div>
 
@@ -932,6 +969,19 @@ listaCarrito.addEventListener("click", function(e){
         }
 
     }
+
+});
+
+const botonesWhatsApp = document.querySelectorAll(".whatsapp-btn");
+
+botonesWhatsApp.forEach(boton => {
+
+    const producto = boton.closest(".producto");
+    const nombre = producto.querySelector(".agregar").dataset.nombre;
+
+    const mensaje = `Hola, me interesa la ${nombre}.`;
+
+    boton.href = `https://wa.me/50664448517?text=${encodeURIComponent(mensaje)}`;
 
 });
 
