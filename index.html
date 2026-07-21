@@ -410,6 +410,22 @@ body {
     margin-bottom:25px;
 
 }
+
+footer{
+
+    background:#3A403D;
+
+    color:white;
+
+    text-align:center;
+
+    padding:30px;
+
+    margin-top:60px;
+
+    font-size:15px;
+
+}
     
 </style>
 </head>
@@ -582,7 +598,9 @@ document.getElementById("cerrar-carrito").onclick=()=>{
     carrito.classList.remove("abierto");
 
 }
-
+     
+const botones = document.querySelectorAll(".agregar");
+     
 botones.forEach(boton => {
 
     boton.onclick = () => {
