@@ -543,7 +543,7 @@ footer{
             <button
                 class="agregar"
                 data-nombre="Producto artesanal"
-                data-precio="25000">
+                data-precio="2500">
                 Agregar al carrito
             </button>
        
@@ -629,9 +629,12 @@ footer{
 
     </div>
 
+<div id="total-carrito">
+    Total: ₡0
 </div>
 
-    
+</div>
+
  <script>
 
 const carrito=document.getElementById("carrito");
@@ -652,9 +655,11 @@ const botones = document.querySelectorAll(".agregar");
      
 
 const listaCarrito = document.getElementById("lista-carrito");
+const totalCarrito = document.getElementById("total-carrito");
 const contador = document.getElementById("contador-carrito");
 
 let cantidad = 0;
+let total = 0;
 
 botones.forEach(boton => {
 
@@ -662,9 +667,13 @@ botones.forEach(boton => {
 
         const nombre = boton.dataset.nombre;
         const precio = boton.dataset.precio;
+        
+        total += Number(precio);
+        
 
 cantidad++;
 contador.textContent = cantidad;
+totalCarrito.textContent = `Total: ₡${total}`;
 
 if (cantidad === 1) {
     listaCarrito.innerHTML = "";
@@ -673,7 +682,7 @@ if (cantidad === 1) {
 listaCarrito.innerHTML += `
     <div class="item-carrito">
         <span>${nombre} - ₡${precio}</span>
-        <button class="eliminar">✕</button>
+        <button class="eliminar" data-precio="${precio}">✕</button>
     </div>
 `;
     };
@@ -689,6 +698,10 @@ listaCarrito.addEventListener("click", function(e){
         cantidad--;
 
         contador.textContent = cantidad;
+
+        total -= Number(e.target.dataset.precio);
+
+        totalCarrito.textContent = `Total: ₡${total}`;
 
 
         if(cantidad === 0){
