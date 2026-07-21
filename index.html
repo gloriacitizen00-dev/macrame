@@ -411,6 +411,13 @@ body {
 
 }
 
+.precio{
+    font-size:22px;
+    font-weight:bold;
+    color:#61786D;
+    margin:10px 0 20px;
+}
+
 footer{
 
     background:#3A403D;
@@ -495,6 +502,8 @@ footer{
 
             <h3>Producto artesanal</h3>
 
+            <p class="precio">₡25000</p>
+
             <button
                 class="agregar"
                 data-nombre="Producto artesanal"
@@ -512,10 +521,12 @@ footer{
 
             <h3>Producto artesanal</h3>
 
+            <p class="precio">₡25000</p>
+
             <button
                 class="agregar"
                 data-nombre="Producto artesanal"
-                data-precio="25000">
+                data-precio="2500">
                 Agregar al carrito
             </button>
        
@@ -529,11 +540,13 @@ footer{
             <img src="bolso/bolso-rosado-artesanal-macrame.jpg" alt="Producto artesanal">
 
             <h3>Producto artesanal</h3>
+            
+            <p class="precio">₡25000</p>
 
             <button
                 class="agregar"
                 data-nombre="Producto artesanal"
-                data-precio="25000">
+                data-precio="9000">
                 Agregar al carrito
             </button>
        
@@ -601,16 +614,29 @@ document.getElementById("cerrar-carrito").onclick=()=>{
      
 const botones = document.querySelectorAll(".agregar");
      
+
+const listaCarrito = document.getElementById("lista-carrito");
+const contador = document.getElementById("contador-carrito");
+
+let cantidad = 0;
+
 botones.forEach(boton => {
 
     boton.onclick = () => {
 
-        alert("El botón funciona");
+        const nombre = boton.dataset.nombre;
+        const precio = boton.dataset.precio;
+
+        cantidad++;
+        contador.textContent = cantidad;
+
+        listaCarrito.innerHTML += `
+            <p>${nombre} - ₡${precio}</p>
+        `;
 
     };
 
 });
-
 
 </script>   
       
