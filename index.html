@@ -166,6 +166,24 @@ body {
 
 }
 
+@media(max-width:800px){
+
+    .grid-productos{
+
+        grid-template-columns:1fr;
+
+        gap:25px;
+
+    }
+
+    .productos{
+
+        padding:20px;
+
+    }
+
+}
+
 
 /* TARJETAS */
 
@@ -198,14 +216,23 @@ body {
 .producto img {
 
     width: 100%;
-
-    aspect-ratio:1/1;
+    height: 280px;
 
     object-fit: cover;
 
     border-radius: 12px;
 
     display:block;
+
+}
+
+@media(max-width:700px){
+
+    .producto img{
+
+        height:220px;
+
+    }
 
 }
 
