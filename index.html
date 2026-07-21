@@ -418,6 +418,42 @@ body {
     margin:10px 0 20px;
 }
 
+.item-carrito{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:12px 0;
+
+    border-bottom:1px solid #ddd;
+
+}
+
+
+.eliminar{
+
+    background:none;
+
+    border:none;
+
+    color:#777;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+}
+
+
+.eliminar:hover{
+
+    color:red;
+
+}
+
 footer{
 
     background:#3A403D;
@@ -502,7 +538,7 @@ footer{
 
             <h3>Producto artesanal</h3>
 
-            <p class="precio">₡25000</p>
+            <p class="precio">₡2500</p>
 
             <button
                 class="agregar"
@@ -521,7 +557,7 @@ footer{
 
             <h3>Producto artesanal</h3>
 
-            <p class="precio">₡25000</p>
+            <p class="precio">₡2500</p>
 
             <button
                 class="agregar"
@@ -541,7 +577,7 @@ footer{
 
             <h3>Producto artesanal</h3>
             
-            <p class="precio">₡25000</p>
+            <p class="precio">₡9000</p>
 
             <button
                 class="agregar"
@@ -627,14 +663,41 @@ botones.forEach(boton => {
         const nombre = boton.dataset.nombre;
         const precio = boton.dataset.precio;
 
-        cantidad++;
+cantidad++;
+contador.textContent = cantidad;
+
+if (cantidad === 1) {
+    listaCarrito.innerHTML = "";
+}
+
+listaCarrito.innerHTML += `
+    <div class="item-carrito">
+        <span>${nombre} - ₡${precio}</span>
+        <button class="eliminar">✕</button>
+    </div>
+`;
+    };
+
+});
+
+listaCarrito.addEventListener("click", function(e){
+
+    if(e.target.classList.contains("eliminar")){
+
+        e.target.parentElement.remove();
+
+        cantidad--;
+
         contador.textContent = cantidad;
 
-        listaCarrito.innerHTML += `
-            <p>${nombre} - ₡${precio}</p>
-        `;
 
-    };
+        if(cantidad === 0){
+
+            listaCarrito.innerHTML = "Tu carrito está vacío.";
+
+        }
+
+    }
 
 });
 
