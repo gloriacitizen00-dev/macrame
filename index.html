@@ -1547,6 +1547,49 @@ function mostrarNotificacion(nombre){
 
 }
 
+const WEBAPP_URL = "https://script.google.com/macros/s/AKfycbxm6_dn3g5z2M7rP9GuxaUKz0eLsrd6UhAA35CkRY6bim8-QnMYfR9k3SSnTNeoiXtP/exec";
+
+document.getElementById("contactForm").addEventListener("submit", async function(e){
+
+    e.preventDefault();
+
+    const datos = {
+
+        tipo: "contacto",
+
+        nombre: document.getElementById("nombre").value,
+
+        email: document.getElementById("email").value,
+
+        mensaje: document.getElementById("mensaje").value
+
+    };
+
+    try{
+
+        const respuesta = await fetch(WEBAPP_URL,{
+
+            method:"POST",
+
+            body: JSON.stringify(datos)
+
+        });
+
+        const resultado = await respuesta.json();
+
+        document.getElementById("respuesta").textContent = resultado.resultado;
+
+        this.reset();
+
+    }catch(error){
+
+        document.getElementById("respuesta").textContent =
+        "Ocurrió un error al enviar el mensaje.";
+
+    }
+
+});
+
 actualizarCarrito();
 
 </script>   
