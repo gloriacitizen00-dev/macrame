@@ -989,8 +989,14 @@ const listaCarrito = document.getElementById("lista-carrito");
 const totalCarrito = document.getElementById("total-carrito");
 const contador = document.getElementById("contador-carrito");
 
-let cantidad = 0;
-let total = 0;
+let carritoProductos = JSON.parse(localStorage.getItem("carrito")) || [];
+
+let cantidad = carritoProductos.length;
+
+let total = carritoProductos.reduce(
+    (suma, producto)=> suma + producto.precio,
+    0
+);
 
 botones.forEach(boton => {
 
@@ -998,6 +1004,19 @@ botones.forEach(boton => {
 
         const nombre = boton.dataset.nombre;
         const precio = boton.dataset.precio;
+
+        carritoProductos.push({
+
+    nombre: nombre,
+    precio: Number(precio)
+
+});
+
+
+localStorage.setItem(
+    "carrito",
+    JSON.stringify(carritoProductos)
+);
 
                 boton.textContent = "✔ Agregado";
 
@@ -1041,13 +1060,19 @@ listaCarrito.addEventListener("click", function(e){
 
     if(e.target.classList.contains("eliminar")){
 
-        e.target.parentElement.remove();
+       const indice = e.target.dataset.index;
 
-        cantidad--;
 
-        contador.textContent = cantidad;
+carritoProductos.splice(indice,1);
 
-        total -= Number(e.target.dataset.precio);
+
+localStorage.setItem(
+    "carrito",
+    JSON.stringify(carritoProductos)
+);
+
+
+actualizarCarrito();
 
         totalCarrito.textContent = `Total: ₡${total}`;
 
@@ -1061,6 +1086,67 @@ listaCarrito.addEventListener("click", function(e){
     }
 
 });
+
+listaCarrito.addEventListener("click", function(e){
+
+    // tu código de eliminar aquí
+
+});
+
+
+// 👇 AQUÍ PEGAS LA FUNCIÓN DEL PUNTO 3
+
+function actualizarCarrito(){
+
+    listaCarrito.innerHTML="";
+
+    if(carritoProductos.length === 0){
+
+        listaCarrito.innerHTML="Tu carrito está vacío.";
+
+    }
+
+
+    carritoProductos.forEach((producto,index)=>{
+
+
+        listaCarrito.innerHTML += `
+
+        <div class="item-carrito">
+
+        <span>
+        ${producto.nombre} - ₡${producto.precio}
+        </span>
+
+        <button class="eliminar" data-index="${index}">
+        ✕
+        </button>
+
+        </div>
+
+        `;
+
+    });
+
+
+    cantidad = carritoProductos.length;
+
+    total = carritoProductos.reduce(
+        (suma,p)=> suma+p.precio,
+        0
+    );
+
+
+    contador.textContent = cantidad;
+
+    totalCarrito.textContent = `Total: ₡${total}`;
+
+}
+
+
+// 👇 AQUÍ sigue tu código que ya tienes
+
+const botonesWhatsApp = document.querySelectorAll(".whatsapp-btn");
 
 const botonesWhatsApp = document.querySelectorAll(".whatsapp-btn");
 
@@ -1122,6 +1208,8 @@ function mostrarNotificacion(nombre){
     },2000);
 
 }
+
+actualizarCarrito();
 
 </script>   
       
