@@ -1009,6 +1009,34 @@ botonesWhatsApp.forEach(boton => {
 
 });
 
+document.getElementById("finalizar-pedido").onclick = () => {
+
+    if(cantidad === 0){
+
+        alert("Tu carrito está vacío.");
+        return;
+
+    }
+
+    let mensaje = "Hola, quiero realizar este pedido:\n\n";
+
+    const productos = document.querySelectorAll(".item-carrito span");
+
+    productos.forEach(producto => {
+
+        mensaje += "• " + producto.textContent + "\n";
+
+    });
+
+    mensaje += `%0ATotal: ₡${total}`;
+
+    window.open(
+        `https://wa.me/50664448517?text=${encodeURIComponent(mensaje)}`,
+        "_blank"
+    );
+
+};
+
 </script>   
       
 </body>
