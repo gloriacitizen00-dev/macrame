@@ -636,6 +636,55 @@ body {
 
 }
 
+.agregar.agregado {
+
+    background: #6FAF7A;
+    color: white;
+
+}
+
+
+.notificacion-carrito {
+
+    position: fixed;
+
+    top: 20px;
+    right: 20px;
+
+    background: #2B302E;
+    color: white;
+
+    padding: 15px 20px;
+
+    border-radius: 12px;
+
+    font-size: 15px;
+
+    z-index: 9999;
+
+    animation: aparecer .3s ease;
+
+}
+
+
+@keyframes aparecer {
+
+    from {
+
+        opacity: 0;
+        transform: translateY(-20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+
+}
+
 footer{
 
     background:#3A403D;
@@ -949,6 +998,23 @@ botones.forEach(boton => {
 
         const nombre = boton.dataset.nombre;
         const precio = boton.dataset.precio;
+
+                boton.textContent = "✔ Agregado";
+
+        boton.classList.add("agregado");
+
+
+        setTimeout(() => {
+
+            boton.textContent = "Agregar al carrito";
+
+            boton.classList.remove("agregado");
+
+        }, 1000);
+
+
+
+        mostrarNotificacion(nombre);
         
         total += Number(precio);
         
@@ -1036,6 +1102,26 @@ document.getElementById("finalizar-pedido").onclick = () => {
     );
 
 };
+
+function mostrarNotificacion(nombre){
+
+    const aviso = document.createElement("div");
+
+    aviso.className = "notificacion-carrito";
+
+    aviso.textContent = `✓ ${nombre} agregado al carrito`;
+
+
+    document.body.appendChild(aviso);
+
+
+    setTimeout(() => {
+
+        aviso.remove();
+
+    },2000);
+
+}
 
 </script>   
       
