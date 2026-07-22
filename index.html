@@ -685,6 +685,74 @@ body {
 
 }
 
+.envios {
+
+    padding: 50px 20px;
+
+    text-align: center;
+
+}
+
+
+.envios h2 {
+
+    font-family: 'Pirata One', cursive;
+
+    font-size: 36px;
+
+}
+
+
+.envios-contenedor {
+
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 25px;
+
+    max-width: 1000px;
+
+    margin: auto;
+
+}
+
+
+.envio-card {
+
+    background:#F4F5F3;
+
+    padding:25px;
+
+    border-radius:15px;
+
+}
+
+
+.envio-card h3 {
+
+    margin-top:0;
+
+}
+
+
+.envio-card p {
+
+    line-height:1.6;
+
+}
+
+
+@media(max-width:768px){
+
+    .envios-contenedor{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
 footer{
 
     background:#3A403D;
@@ -904,6 +972,53 @@ footer{
         Por ello, el tiempo estimado de preparación es de aproximadamente
         <strong>2 días hábiles</strong> antes del envío.
     </p>
+
+</section>
+
+    <section class="envios">
+
+    <h2>🚚 Información de envíos</h2>
+
+    <div class="envios-contenedor">
+
+        <div class="envio-card">
+
+            <h3>📦 Preparación</h3>
+
+            <p>
+                Cada pieza se prepara artesanalmente después de confirmar tu pedido.
+            </p>
+
+            <strong>
+                Tiempo estimado: 2 días hábiles.
+            </strong>
+
+        </div>
+
+
+        <div class="envio-card">
+
+            <h3>🌿 Entrega</h3>
+
+            <p>
+                Realizamos envíos dentro de Costa Rica mediante servicios de mensajería disponibles.
+            </p>
+
+        </div>
+
+
+        <div class="envio-card">
+
+            <h3>💳 Pago</h3>
+
+            <p>
+                Confirmamos tu pedido por WhatsApp y te enviamos los datos para realizar el pago por SINPE Móvil.
+            </p>
+
+        </div>
+
+
+    </div>
 
 </section>
 
