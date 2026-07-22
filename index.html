@@ -836,6 +836,53 @@ body {
 
 }
 
+.contacto{
+
+max-width:600px;
+
+margin:60px auto;
+
+padding:30px;
+
+background:white;
+
+border-radius:15px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.1);
+
+}
+
+.contacto input,
+.contacto textarea{
+
+width:100%;
+
+padding:12px;
+
+margin:10px 0;
+
+font-size:16px;
+
+}
+
+.contacto button{
+
+background:#4CAF50;
+
+color:white;
+
+padding:14px 25px;
+
+border:none;
+
+cursor:pointer;
+
+border-radius:8px;
+
+font-size:16px;
+
+}
+
 footer{
 
     background:#3A403D;
@@ -1161,6 +1208,37 @@ footer p {
 
 
     </div>
+
+    <section class="contacto">
+
+<h2>Contáctanos</h2>
+
+<form id="contactForm">
+
+<input
+type="text"
+id="nombre"
+placeholder="Nombre"
+required>
+
+<input
+type="email"
+id="email"
+placeholder="Correo electrónico"
+required>
+
+<textarea
+id="mensaje"
+placeholder="Escribe tu mensaje"
+required></textarea>
+
+<button type="submit">
+Enviar mensaje
+</button>
+
+</form>
+
+<p id="respuesta"></p>
 
 </section>
 
