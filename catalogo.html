@@ -1,1 +1,1225 @@
+<!DOCTYPE html>
+<html lang="es">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cosas para la casa | Artesanías Cola Blanca</title>
+
+    <meta
+        name="description"
+        content="Descubre piezas de macramé hechas a mano para decorar tu hogar. Artesanías Cola Blanca, Costa Rica."
+    >
+
+    <meta
+        name="keywords"
+        content="macramé para el hogar, decoración de macramé, portamacetas, tapices, artesanías Costa Rica, Artesanías Cola Blanca"
+    >
+
+    <meta name="author" content="Gloria Martínez">
+
+    <meta name="robots" content="index, follow">
+
+    <meta name="theme-color" content="#5b7f5b">
+
+    <link
+        rel="canonical"
+        href="https://gloriacitizen00-dev.github.io/Artesanias-Cola-Blanca/catalogo.html"
+    >
+
+    <link
+        rel="icon"
+        href="favicon.png"
+        type="image/png"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap"
+        rel="stylesheet"
+    >
+
+
+<style>
+
+/* =========================================
+   BASE
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    margin: 0;
+
+    background: #ffffff;
+
+    color: #2B302E;
+
+    font-family: Arial, sans-serif;
+
+    overflow-x: hidden;
+
+}
+
+
+/* =========================================
+   CABECERA
+========================================= */
+
+.header {
+
+    background: #ffffff;
+
+    text-align: center;
+
+    padding: 45px 20px 25px;
+
+}
+
+.header h1 {
+
+    font-family: "Pirata One", cursive;
+
+    font-size: 48px;
+
+    font-weight: normal;
+
+    color: #5f5f5f;
+
+    margin: 0 0 10px;
+
+}
+
+.header p {
+
+    margin: 0;
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
+
+    color: #2B302E;
+
+}
+
+
+/* =========================================
+   MENÚ
+========================================= */
+
+.menu {
+
+    background: #3A403D;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 25px;
+
+    padding: 13px 15px;
+
+}
+
+.menu a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    letter-spacing: 1px;
+
+    transition: .3s;
+
+}
+
+.menu a:hover {
+
+    color: #A8C3B0;
+
+}
+
+.heart {
+
+    color: #ffffff;
+
+    font-size: 12px;
+
+    margin-right: 8px;
+
+    -webkit-text-stroke: 1px #888;
+
+}
+
+
+/* =========================================
+   CATÁLOGO
+========================================= */
+
+.catalogo {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 70px 30px 100px;
+
+}
+
+.catalogo-titulo {
+
+    text-align: center;
+
+    font-family: "Pirata One", cursive;
+
+    font-size: 50px;
+
+    font-weight: normal;
+
+    color: #5f5f5f;
+
+    margin: 0 0 10px;
+
+}
+
+.catalogo-categoria {
+
+    text-align: center;
+
+    font-size: 19px;
+
+    letter-spacing: 1px;
+
+    color: #61786D;
+
+    margin: 0 0 20px;
+
+}
+
+.catalogo-instruccion {
+
+    text-align: center;
+
+    max-width: 620px;
+
+    margin: 0 auto 65px;
+
+    color: #555;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+}
+
+.catalogo-instruccion strong {
+
+    color: #2B302E;
+
+    font-weight: normal;
+
+}
+
+
+/* =========================================
+   GALERÍA DE FOTOGRAFÍAS
+========================================= */
+
+.galeria {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 55px 35px;
+
+    align-items: start;
+
+}
+
+
+/* =========================================
+   FOTOGRAFÍA INSTANTÁNEA
+========================================= */
+
+.fotografia {
+
+    background: #ffffff;
+
+    padding: 12px 12px 28px;
+
+    box-shadow:
+        0 8px 18px rgba(0,0,0,.12),
+        0 2px 5px rgba(0,0,0,.06);
+
+    cursor: pointer;
+
+    text-align: left;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+
+}
+
+
+/* Inclinaciones */
+
+.fotografia:nth-child(1) {
+
+    transform: rotate(-2deg);
+
+}
+
+.fotografia:nth-child(2) {
+
+    transform: rotate(1.5deg);
+
+}
+
+.fotografia:nth-child(3) {
+
+    transform: rotate(-1deg);
+
+}
+
+.fotografia:nth-child(4) {
+
+    transform: rotate(2deg);
+
+}
+
+.fotografia:nth-child(5) {
+
+    transform: rotate(1deg);
+
+}
+
+.fotografia:nth-child(6) {
+
+    transform: rotate(-1.5deg);
+
+}
+
+
+/* Hover */
+
+.fotografia:hover {
+
+    transform: translateY(-8px) rotate(0deg);
+
+    box-shadow:
+        0 16px 30px rgba(0,0,0,.16),
+        0 5px 10px rgba(0,0,0,.08);
+
+}
+
+
+/* =========================================
+   IMAGEN
+========================================= */
+
+.fotografia-imagen {
+
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    overflow: hidden;
+
+    background: #F4F5F3;
+
+}
+
+.fotografia-imagen img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform .4s ease;
+
+}
+
+.fotografia:hover img {
+
+    transform: scale(1.03);
+
+}
+
+
+/* =========================================
+   FRANJA INFERIOR DE LA FOTOGRAFÍA
+========================================= */
+
+.fotografia-info {
+
+    padding: 14px 7px 0;
+
+}
+
+.codigo {
+
+    display: block;
+
+    font-size: 12px;
+
+    letter-spacing: 1.5px;
+
+    color: #777;
+
+    margin-bottom: 6px;
+
+}
+
+.nombre-producto {
+
+    margin: 0;
+
+    font-family: "Pirata One", cursive;
+
+    font-size: 24px;
+
+    font-weight: normal;
+
+    color: #444;
+
+}
+
+
+/* =========================================
+   MODAL DEL PRODUCTO
+========================================= */
+
+.modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(30,34,32,.72);
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 25px;
+
+    z-index: 9999;
+
+}
+
+.modal.abierto {
+
+    display: flex;
+
+}
+
+.modal-contenido {
+
+    background: #ffffff;
+
+    width: min(850px, 100%);
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    padding: 25px;
+
+    position: relative;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.25);
+
+}
+
+.cerrar {
+
+    position: absolute;
+
+    top: 10px;
+
+    right: 15px;
+
+    background: none;
+
+    border: none;
+
+    font-size: 30px;
+
+    color: #555;
+
+    cursor: pointer;
+
+}
+
+.modal-producto {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 35px;
+
+    align-items: center;
+
+}
+
+.modal-producto img {
+
+    width: 100%;
+
+    max-height: 600px;
+
+    object-fit: cover;
+
+}
+
+.modal-info {
+
+    padding: 10px;
+
+}
+
+.modal-codigo {
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    color: #777;
+
+}
+
+.modal-info h2 {
+
+    font-family: "Pirata One", cursive;
+
+    font-size: 42px;
+
+    font-weight: normal;
+
+    color: #444;
+
+    margin: 10px 0 20px;
+
+}
+
+.modal-info p {
+
+    color: #555;
+
+    line-height: 1.7;
+
+    font-size: 16px;
+
+}
+
+.modal-precio {
+
+    font-size: 25px;
+
+    color: #61786D;
+
+    font-weight: bold;
+
+    margin: 25px 0;
+
+}
+
+.comprar {
+
+    display: inline-block;
+
+    background: #61786D;
+
+    color: white;
+
+    border: none;
+
+    padding: 13px 30px;
+
+    border-radius: 25px;
+
+    cursor: pointer;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    letter-spacing: 1px;
+
+    transition: .3s;
+
+}
+
+.comprar:hover {
+
+    background: #3B8D6B;
+
+}
+
+
+/* =========================================
+   PIE DE PÁGINA
+========================================= */
+
+footer {
+
+    background: #3A403D;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 30px;
+
+    margin-top: 20px;
+
+}
+
+footer h3 {
+
+    font-family: "Pirata One", cursive;
+
+    font-size: 32px;
+
+    font-weight: normal;
+
+    margin: 0 0 10px;
+
+}
+
+footer p {
+
+    margin: 10px 0;
+
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .galeria {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .header {
+
+        padding-top: 35px;
+
+    }
+
+    .header h1 {
+
+        font-size: 40px;
+
+    }
+
+    .catalogo {
+
+        padding: 50px 20px 70px;
+
+    }
+
+    .catalogo-titulo {
+
+        font-size: 42px;
+
+    }
+
+    .catalogo-instruccion {
+
+        margin-bottom: 45px;
+
+    }
+
+    .galeria {
+
+        grid-template-columns: 1fr;
+
+        max-width: 380px;
+
+        margin: auto;
+
+        gap: 45px;
+
+    }
+
+    .modal-producto {
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+
+    }
+
+    .modal-info h2 {
+
+        font-size: 35px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     CABECERA
+========================================= -->
+
+<header class="header">
+
+    <h1>Artesanías Cola Blanca</h1>
+
+    <p>100% costarricense</p>
+
+</header>
+
+
+<!-- =========================================
+     MENÚ
+========================================= -->
+
+<nav class="menu">
+
+    <a href="index.html">
+        <span class="heart">♡</span>Inicio
+    </a>
+
+    <a href="catalogo.html">
+        <span class="heart">♡</span>Catálogo
+    </a>
+
+    <a href="index.html#contacto">
+        <span class="heart">♡</span>Contacto
+    </a>
+
+    <a
+        href="https://www.instagram.com/artesaniascola_blanca/"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        <span class="heart">♡</span>Instagram
+
+    </a>
+
+</nav>
+
+
+<!-- =========================================
+     CATÁLOGO CASA
+========================================= -->
+
+<main class="catalogo">
+
+    <h2 class="catalogo-titulo">
+        Catálogo
+    </h2>
+
+    <p class="catalogo-categoria">
+        Cosas para la casa
+    </p>
+
+    <p class="catalogo-instruccion">
+
+        ¿Quieres conocer más sobre un producto?
+
+        <br>
+
+        <strong>
+            Haz clic en la fotografía
+        </strong>
+
+        para ver su descripción y precio.
+
+    </p>
+
+
+    <section
+        class="galeria"
+        aria-label="Productos de macramé para la casa">
+
+
+        <!-- =================================
+             PRODUCTO #001
+        ================================== -->
+
+        <article
+            class="fotografia"
+            data-producto="001">
+
+            <div class="fotografia-imagen">
+
+                <img
+                    src="images/productos/casa-001.jpg"
+                    alt="Producto de macramé para decoración del hogar"
+                    loading="lazy"
+                    width="600"
+                    height="600">
+
+            </div>
+
+            <div class="fotografia-info">
+
+                <span class="codigo">
+                    #001
+                </span>
+
+                <h3 class="nombre-producto">
+                    Portamacetas
+                </h3>
+
+            </div>
+
+        </article>
+
+
+        <!-- =================================
+             PRODUCTO #002
+        ================================== -->
+
+        <article
+            class="fotografia"
+            data-producto="002">
+
+            <div class="fotografia-imagen">
+
+                <img
+                    src="images/productos/casa-002.jpg"
+                    alt="Tapiz de macramé artesanal para decoración del hogar"
+                    loading="lazy"
+                    width="600"
+                    height="600">
+
+            </div>
+
+            <div class="fotografia-info">
+
+                <span class="codigo">
+                    #002
+                </span>
+
+                <h3 class="nombre-producto">
+                    Tapiz de macramé
+                </h3>
+
+            </div>
+
+        </article>
+
+
+        <!-- =================================
+             PRODUCTO #003
+        ================================== -->
+
+        <article
+            class="fotografia"
+            data-producto="003">
+
+            <div class="fotografia-imagen">
+
+                <img
+                    src="images/productos/casa-003.jpg"
+                    alt="Canasta artesanal de macramé para el hogar"
+                    loading="lazy"
+                    width="600"
+                    height="600">
+
+            </div>
+
+            <div class="fotografia-info">
+
+                <span class="codigo">
+                    #003
+                </span>
+
+                <h3 class="nombre-producto">
+                    Canasta artesanal
+                </h3>
+
+            </div>
+
+        </article>
+
+
+        <!-- =================================
+             PRODUCTO #004
+        ================================== -->
+
+        <article
+            class="fotografia"
+            data-producto="004">
+
+            <div class="fotografia-imagen">
+
+                <img
+                    src="images/productos/casa-004.jpg"
+                    alt="Decoración artesanal de macramé para el hogar"
+                    loading="lazy"
+                    width="600"
+                    height="600">
+
+            </div>
+
+            <div class="fotografia-info">
+
+                <span class="codigo">
+                    #004
+                </span>
+
+                <h3 class="nombre-producto">
+                    Decoración artesanal
+                </h3>
+
+            </div>
+
+        </article>
+
+
+    </section>
+
+</main>
+
+
+<!-- =========================================
+     MODAL
+========================================= -->
+
+<div
+    class="modal"
+    id="modalProducto"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modalNombre">
+
+
+    <div class="modal-contenido">
+
+
+        <button
+            class="cerrar"
+            id="cerrarModal"
+            aria-label="Cerrar">
+
+            ×
+
+        </button>
+
+
+        <div class="modal-producto">
+
+
+            <img
+                id="modalImagen"
+                src=""
+                alt="">
+
+
+            <div class="modal-info">
+
+
+                <span
+                    class="modal-codigo"
+                    id="modalCodigo">
+                </span>
+
+
+                <h2 id="modalNombre">
+                </h2>
+
+
+                <p id="modalDescripcion">
+                </p>
+
+
+                <div
+                    class="modal-precio"
+                    id="modalPrecio">
+                </div>
+
+
+                <a
+                    class="comprar"
+                    id="botonComprar"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    Comprar
+
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+<!-- =========================================
+     PIE DE PÁGINA
+========================================= -->
+
+<footer>
+
+    <h3>
+        Artesanías Cola Blanca
+    </h3>
+
+    <p>
+        Artesanías de macramé hechas a mano en Costa Rica.
+    </p>
+
+    © 2026 Artesanías Cola Blanca
+
+</footer>
+
+
+<script>
+
+/* =========================================
+   INFORMACIÓN DE LOS PRODUCTOS
+========================================= */
+
+const productos = {
+
+    "001": {
+
+        nombre: "Portamacetas",
+
+        descripcion:
+            "Portamacetas tejido a mano para incorporar plantas y elementos naturales a tus espacios.",
+
+        precio: "₡8.500",
+
+        imagen:
+            "images/productos/casa-001.jpg"
+
+    },
+
+
+    "002": {
+
+        nombre: "Tapiz de macramé",
+
+        descripcion:
+            "Pieza decorativa tejida a mano para aportar textura y calidez al hogar.",
+
+        precio: "₡12.000",
+
+        imagen:
+            "images/productos/casa-002.jpg"
+
+    },
+
+
+    "003": {
+
+        nombre: "Canasta artesanal",
+
+        descripcion:
+            "Canasta elaborada artesanalmente para organizar y decorar diferentes espacios.",
+
+        precio: "₡10.000",
+
+        imagen:
+            "images/productos/casa-003.jpg"
+
+    },
+
+
+    "004": {
+
+        nombre: "Decoración artesanal",
+
+        descripcion:
+            "Pieza de macramé hecha a mano para complementar la decoración del hogar.",
+
+        precio: "₡7.500",
+
+        imagen:
+            "images/productos/casa-004.jpg"
+
+    }
+
+};
+
+
+/* =========================================
+   ELEMENTOS
+========================================= */
+
+const fotografias =
+    document.querySelectorAll(".fotografia");
+
+const modal =
+    document.getElementById("modalProducto");
+
+const cerrarModal =
+    document.getElementById("cerrarModal");
+
+const modalImagen =
+    document.getElementById("modalImagen");
+
+const modalCodigo =
+    document.getElementById("modalCodigo");
+
+const modalNombre =
+    document.getElementById("modalNombre");
+
+const modalDescripcion =
+    document.getElementById("modalDescripcion");
+
+const modalPrecio =
+    document.getElementById("modalPrecio");
+
+const botonComprar =
+    document.getElementById("botonComprar");
+
+
+/* =========================================
+   ABRIR PRODUCTO
+========================================= */
+
+fotografias.forEach(fotografia => {
+
+    fotografia.addEventListener("click", () => {
+
+
+        const codigo =
+            fotografia.dataset.producto;
+
+
+        const producto =
+            productos[codigo];
+
+
+        modalImagen.src =
+            producto.imagen;
+
+        modalImagen.alt =
+            producto.nombre;
+
+
+        modalCodigo.textContent =
+            "#" + codigo;
+
+
+        modalNombre.textContent =
+            producto.nombre;
+
+
+        modalDescripcion.textContent =
+            producto.descripcion;
+
+
+        modalPrecio.textContent =
+            producto.precio;
+
+
+        const mensaje =
+            `Hola, me interesa el producto #${codigo} - ${producto.nombre}. ¿Está disponible?`;
+
+
+        botonComprar.href =
+            `https://wa.me/50664448517?text=${encodeURIComponent(mensaje)}`;
+
+
+        modal.classList.add("abierto");
+
+
+    });
+
+});
+
+
+/* =========================================
+   CERRAR
+========================================= */
+
+cerrarModal.addEventListener("click", () => {
+
+    modal.classList.remove("abierto");
+
+});
+
+
+/* =========================================
+   CERRAR AL HACER CLIC FUERA
+========================================= */
+
+modal.addEventListener("click", (e) => {
+
+    if (e.target === modal) {
+
+        modal.classList.remove("abierto");
+
+    }
+
+});
+
+
+/* =========================================
+   CERRAR CON ESC
+========================================= */
+
+document.addEventListener("keydown", (e) => {
+
+    if (e.key === "Escape") {
+
+        modal.classList.remove("abierto");
+
+    }
+
+});
+
+</script>
+
+
+</body>
+
+</html>
