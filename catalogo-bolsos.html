@@ -1,594 +1,700 @@
-```html
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
 
-  <meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Bolsos y piezas artesanales | Artesanías Cola Blanca</title>
+    <title>Bolsos y piezas artesanales | Artesanías Cola Blanca</title>
 
-  <meta
-    name="description"
-    content="Bolsos y piezas artesanales de macramé hechos a mano en Costa Rica por Artesanías Cola Blanca."
-  >
+    <meta
+        name="description"
+        content="Descubre bolsos y piezas artesanales de macramé hechas a mano. Artesanías Cola Blanca, Costa Rica."
+    >
 
-  <link
-    rel="canonical"
-    href="https://gloriacitizen00-dev.github.io/macrame/catalogo-bolsos.html"
-  >
+    <meta
+        name="keywords"
+        content="bolsos de macramé, bolsos artesanales, piezas artesanales, macramé Costa Rica, Artesanías Cola Blanca"
+    >
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta name="author" content="Gloria Martínez">
 
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  >
+    <meta name="robots" content="index, follow">
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap"
-    rel="stylesheet"
-  >
+    <meta name="theme-color" content="#5b7f5b">
 
-  <link
-    rel="stylesheet"
-    href="style.css"
-  >
+    <link
+        rel="canonical"
+        href="https://gloriacitizen00-dev.github.io/macrame/catalogo-bolsos.html"
+    >
+
+    <link
+        rel="icon"
+        href="favicon.png"
+        type="image/png"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap"
+        rel="stylesheet"
+    >
 
 
-  <style>
+<style>
 
-    /* =========================
-       CATÁLOGO
-    ========================= */
+/* =========================================
+   BASE
+========================================= */
 
-    .catalogo-page {
+* {
+    box-sizing: border-box;
+}
 
-      min-height: 100vh;
+html {
+    scroll-behavior: smooth;
+}
 
-      background: #f7f7f5;
+body {
 
-      color: #222;
+    margin: 0;
+
+    background: #ffffff;
+
+    color: #2B302E;
+
+    font-family: Arial, sans-serif;
+
+    overflow-x: hidden;
+
+}
+
+
+/* =========================================
+   CABECERA
+========================================= */
+
+.header {
+
+    background: #ffffff;
+
+    text-align: center;
+
+    padding: 45px 20px 25px;
+
+}
+
+.header h1 {
+
+    font-family: "Pirata One", cursive;
+
+    font-size: 48px;
+
+    font-weight: normal;
+
+    color: #5f5f5f;
+
+    margin: 0 0 10px;
+
+}
+
+.header p {
+
+    margin: 0;
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
+
+    color: #2B302E;
+
+}
+
+
+/* =========================================
+   MENÚ
+========================================= */
+
+.menu {
+
+    background: #3A403D;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 25px;
+
+    padding: 13px 15px;
+
+}
+
+.menu a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    letter-spacing: 1px;
+
+    transition: .3s;
+
+}
+
+.menu a:hover {
+
+    color: #A8C3B0;
+
+}
+
+.heart {
+
+    color: #ffffff;
+
+    font-size: 12px;
+
+    margin-right: 8px;
+
+    -webkit-text-stroke: 1px #888;
+
+}
+
+
+/* =========================================
+   CATÁLOGO
+========================================= */
+
+.catalogo {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 70px 30px 100px;
+
+}
+
+.catalogo-titulo {
+
+    text-align: center;
+
+    font-family: "Pirata One", cursive;
+
+    font-size: 50px;
+
+    font-weight: normal;
+
+    color: #5f5f5f;
+
+    margin: 0 0 10px;
+
+}
+
+.catalogo-categoria {
+
+    text-align: center;
+
+    font-size: 19px;
+
+    letter-spacing: 1px;
+
+    color: #61786D;
+
+    margin: 0 0 20px;
+
+}
+
+.catalogo-instruccion {
+
+    text-align: center;
+
+    max-width: 620px;
+
+    margin: 0 auto 65px;
+
+    color: #555;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+}
+
+.catalogo-instruccion strong {
+
+    color: #2B302E;
+
+    font-weight: normal;
+
+}
+
+
+/* =========================================
+   GALERÍA DE FOTOGRAFÍAS
+========================================= */
+
+.galeria {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 55px 35px;
+
+    align-items: start;
+
+}
+
+
+/* =========================================
+   FOTOGRAFÍA INSTANTÁNEA
+========================================= */
+
+.fotografia {
+
+    background: #ffffff;
+
+    padding: 12px 12px 28px;
+
+    box-shadow:
+        0 8px 18px rgba(0,0,0,.12),
+        0 2px 5px rgba(0,0,0,.06);
+
+    cursor: pointer;
+
+    text-align: left;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+
+}
+
+
+/* Inclinaciones */
+
+.fotografia:nth-child(1) {
+
+    transform: rotate(-2deg);
+
+}
+
+.fotografia:nth-child(2) {
+
+    transform: rotate(1.5deg);
+
+}
+
+.fotografia:nth-child(3) {
+
+    transform: rotate(-1deg);
+
+}
+
+.fotografia:nth-child(4) {
+
+    transform: rotate(2deg);
+
+}
+
+.fotografia:nth-child(5) {
+
+    transform: rotate(1deg);
+
+}
+
+.fotografia:nth-child(6) {
+
+    transform: rotate(-1.5deg);
+
+}
+
+
+/* Hover */
+
+.fotografia:hover {
+
+    transform: translateY(-8px) rotate(0deg);
+
+    box-shadow:
+        0 16px 30px rgba(0,0,0,.16),
+        0 5px 10px rgba(0,0,0,.08);
+
+}
+
+
+/* =========================================
+   IMAGEN
+========================================= */
+
+.fotografia-imagen {
+
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    overflow: hidden;
+
+    background: #F4F5F3;
+
+}
+
+.fotografia-imagen img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform .4s ease;
+
+}
+
+.fotografia:hover img {
+
+    transform: scale(1.03);
+
+}
+
+
+/* =========================================
+   FRANJA INFERIOR DE LA FOTOGRAFÍA
+========================================= */
+
+.fotografia-info {
+
+    padding: 14px 7px 0;
+
+}
+
+.codigo {
+
+    display: block;
+
+    font-size: 12px;
+
+    letter-spacing: 1.5px;
+
+    color: #777;
+
+    margin-bottom: 6px;
+
+}
+
+.nombre-producto {
+
+    margin: 0;
+
+    font-family: "Pirata One", cursive;
+
+    font-size: 24px;
+
+    font-weight: normal;
+
+    color: #444;
+
+}
+
+
+/* =========================================
+   MODAL DEL PRODUCTO
+========================================= */
+
+.modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(30,34,32,.72);
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 25px;
+
+    z-index: 9999;
+
+}
+
+.modal.abierto {
+
+    display: flex;
+
+}
+
+.modal-contenido {
+
+    background: #ffffff;
+
+    width: min(850px, 100%);
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    padding: 25px;
+
+    position: relative;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.25);
+
+}
+
+.cerrar {
+
+    position: absolute;
+
+    top: 10px;
+
+    right: 15px;
+
+    background: none;
+
+    border: none;
+
+    font-size: 30px;
+
+    color: #555;
+
+    cursor: pointer;
+
+}
+
+.modal-producto {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 35px;
+
+    align-items: center;
+
+}
+
+.modal-producto img {
+
+    width: 100%;
+
+    max-height: 600px;
+
+    object-fit: cover;
+
+}
+
+.modal-info {
+
+    padding: 10px;
+
+}
+
+.modal-codigo {
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    color: #777;
+
+}
+
+.modal-info h2 {
+
+    font-family: "Pirata One", cursive;
+
+    font-size: 42px;
+
+    font-weight: normal;
+
+    color: #444;
+
+    margin: 10px 0 20px;
+
+}
+
+.modal-info p {
+
+    color: #555;
+
+    line-height: 1.7;
+
+    font-size: 16px;
+
+}
+
+.modal-precio {
+
+    font-size: 25px;
+
+    color: #61786D;
+
+    font-weight: bold;
+
+    margin: 25px 0;
+
+}
+
+.comprar {
+
+    display: inline-block;
+
+    background: #61786D;
+
+    color: white;
+
+    border: none;
+
+    padding: 13px 30px;
+
+    border-radius: 25px;
+
+    cursor: pointer;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    letter-spacing: 1px;
+
+    transition: .3s;
+
+}
+
+.comprar:hover {
+
+    background: #3B8D6B;
+
+}
+
+
+/* =========================================
+   PIE DE PÁGINA
+========================================= */
+
+footer {
+
+    background: #3A403D;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 30px;
+
+    margin-top: 20px;
+
+}
+
+footer h3 {
+
+    font-family: "Pirata One", cursive;
+
+    font-size: 32px;
+
+    font-weight: normal;
+
+    margin: 0 0 10px;
+
+}
+
+footer p {
+
+    margin: 10px 0;
+
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .galeria {
+
+        grid-template-columns: repeat(2, 1fr);
 
     }
 
-
-    .catalogo-header {
-
-      text-align: center;
-
-      padding: 55px 20px 25px;
-
-    }
+}
 
 
-    .catalogo-logo {
+@media (max-width: 650px) {
 
-      font-family: "Pirata One", cursive;
+    .header {
 
-      font-size: 3rem;
-
-      font-weight: normal;
-
-      margin: 0 0 10px;
-
-      color: #222;
+        padding-top: 35px;
 
     }
 
+    .header h1 {
 
-    .catalogo-header p {
-
-      margin: 0;
-
-      font-size: 1rem;
-
-      color: #666;
+        font-size: 40px;
 
     }
 
+    .catalogo {
 
-    /* =========================
-       NAVEGACIÓN
-    ========================= */
-
-    .catalogo-nav {
-
-      display: flex;
-
-      justify-content: center;
-
-      gap: 25px;
-
-      flex-wrap: wrap;
-
-      padding: 15px 20px 35px;
+        padding: 50px 20px 70px;
 
     }
 
+    .catalogo-titulo {
 
-    .catalogo-nav a {
-
-      color: #333;
-
-      text-decoration: none;
-
-      font-size: 0.95rem;
-
-      transition: opacity 0.2s ease;
+        font-size: 42px;
 
     }
 
+    .catalogo-instruccion {
 
-    .catalogo-nav a:hover {
-
-      opacity: 0.55;
-
-    }
-
-
-    /* =========================
-       INTRODUCCIÓN
-    ========================= */
-
-    .catalogo-intro {
-
-      text-align: center;
-
-      max-width: 700px;
-
-      margin: 0 auto 45px;
-
-      padding: 0 20px;
+        margin-bottom: 45px;
 
     }
 
-
-    .catalogo-intro h1 {
-
-      font-family: "Pirata One", cursive;
-
-      font-size: 3rem;
-
-      font-weight: normal;
-
-      margin: 0 0 18px;
-
-    }
-
-
-    .catalogo-intro p {
-
-      margin: 0;
-
-      color: #666;
-
-      line-height: 1.7;
-
-      font-size: 1rem;
-
-    }
-
-
-    /* =========================
-       PRODUCTOS
-    ========================= */
-
-    .productos-grid {
-
-      width: min(1200px, 90%);
-
-      margin: 0 auto;
-
-      display: grid;
-
-      grid-template-columns: repeat(4, 1fr);
-
-      gap: 55px 35px;
-
-      padding-bottom: 80px;
-
-    }
-
-
-    /* =========================
-       INSTANTÁNEAS
-    ========================= */
-
-    .producto-polaroid {
-
-      background: #fff;
-
-      padding: 12px 12px 22px;
-
-      box-shadow:
-        0 5px 18px rgba(0, 0, 0, 0.12);
-
-      cursor: pointer;
-
-      transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
-
-    }
-
-
-    .producto-polaroid:nth-child(1) {
-
-      transform: rotate(-2deg);
-
-    }
-
-
-    .producto-polaroid:nth-child(2) {
-
-      transform: rotate(1.5deg);
-
-    }
-
-
-    .producto-polaroid:nth-child(3) {
-
-      transform: rotate(-1deg);
-
-    }
-
-
-    .producto-polaroid:nth-child(4) {
-
-      transform: rotate(2deg);
-
-    }
-
-
-    .producto-polaroid:hover {
-
-      transform:
-        translateY(-8px)
-        rotate(0deg);
-
-      box-shadow:
-        0 12px 28px rgba(0, 0, 0, 0.18);
-
-    }
-
-
-    .foto-producto {
-
-      width: 100%;
-
-      aspect-ratio: 1 / 1;
-
-      object-fit: cover;
-
-      display: block;
-
-      background: #e9e9e5;
-
-    }
-
-
-    .polaroid-info {
-
-      padding: 16px 5px 0;
-
-      text-align: center;
-
-    }
-
-
-    .producto-codigo {
-
-      display: block;
-
-      font-size: 0.75rem;
-
-      letter-spacing: 2px;
-
-      color: #777;
-
-      margin-bottom: 7px;
-
-    }
-
-
-    .producto-nombre {
-
-      margin: 0;
-
-      font-size: 1rem;
-
-      font-weight: 500;
-
-      color: #222;
-
-    }
-
-
-    /* =========================
-       MODAL
-    ========================= */
-
-    .modal-producto {
-
-      position: fixed;
-
-      inset: 0;
-
-      z-index: 9999;
-
-      display: none;
-
-      align-items: center;
-
-      justify-content: center;
-
-      padding: 25px;
-
-      background:
-        rgba(0, 0, 0, 0.72);
-
-    }
-
-
-    .modal-producto.activo {
-
-      display: flex;
-
-    }
-
-
-    .modal-contenido {
-
-      position: relative;
-
-      width: min(850px, 100%);
-
-      max-height: 90vh;
-
-      overflow-y: auto;
-
-      background: #fff;
-
-      padding: 35px;
-
-      box-shadow:
-        0 15px 50px rgba(0, 0, 0, 0.3);
-
-    }
-
-
-    .modal-cerrar {
-
-      position: absolute;
-
-      top: 12px;
-
-      right: 18px;
-
-      border: none;
-
-      background: transparent;
-
-      font-size: 2rem;
-
-      line-height: 1;
-
-      color: #333;
-
-      cursor: pointer;
-
-    }
-
-
-    .modal-grid {
-
-      display: grid;
-
-      grid-template-columns: 1fr 1fr;
-
-      gap: 35px;
-
-      align-items: center;
-
-    }
-
-
-    .modal-imagen {
-
-      width: 100%;
-
-      aspect-ratio: 1 / 1;
-
-      object-fit: cover;
-
-      display: block;
-
-    }
-
-
-    .modal-codigo {
-
-      font-size: 0.8rem;
-
-      letter-spacing: 2px;
-
-      color: #777;
-
-      margin-bottom: 8px;
-
-    }
-
-
-    .modal-nombre {
-
-      font-family: "Pirata One", cursive;
-
-      font-size: 2.5rem;
-
-      font-weight: normal;
-
-      margin: 0 0 20px;
-
-    }
-
-
-    .modal-descripcion {
-
-      color: #555;
-
-      line-height: 1.7;
-
-      margin-bottom: 25px;
-
-    }
-
-
-    .modal-precio {
-
-      font-size: 1.4rem;
-
-      font-weight: 600;
-
-      margin-bottom: 25px;
-
-    }
-
-
-    .boton-comprar {
-
-      display: inline-block;
-
-      border: none;
-
-      background: #333;
-
-      color: #fff;
-
-      padding: 13px 28px;
-
-      font-size: 0.9rem;
-
-      letter-spacing: 1px;
-
-      cursor: pointer;
-
-      text-decoration: none;
-
-      transition: background 0.2s ease;
-
-    }
-
-
-    .boton-comprar:hover {
-
-      background: #555;
-
-    }
-
-
-    /* =========================
-       FOOTER
-    ========================= */
-
-    .catalogo-footer {
-
-      text-align: center;
-
-      border-top: 1px solid #ddd;
-
-      padding: 30px 20px;
-
-      color: #777;
-
-      font-size: 0.85rem;
-
-    }
-
-
-    /* =========================
-       RESPONSIVE
-    ========================= */
-
-    @media (max-width: 1000px) {
-
-      .productos-grid {
-
-        grid-template-columns:
-          repeat(2, 1fr);
-
-        gap: 45px 30px;
-
-      }
-
-    }
-
-
-    @media (max-width: 650px) {
-
-      .catalogo-header {
-
-        padding-top: 40px;
-
-      }
-
-
-      .catalogo-logo {
-
-        font-size: 2.4rem;
-
-      }
-
-
-      .catalogo-intro h1 {
-
-        font-size: 2.4rem;
-
-      }
-
-
-      .productos-grid {
-
-        width: 88%;
+    .galeria {
 
         grid-template-columns: 1fr;
+
+        max-width: 380px;
+
+        margin: auto;
 
         gap: 45px;
 
-      }
+    }
 
-
-      .modal-contenido {
-
-        padding: 25px 20px;
-
-      }
-
-
-      .modal-grid {
+    .modal-producto {
 
         grid-template-columns: 1fr;
 
-        gap: 25px;
-
-      }
-
-
-      .modal-nombre {
-
-        font-size: 2.1rem;
-
-      }
+        gap: 20px;
 
     }
 
-  </style>
+    .modal-info h2 {
+
+        font-size: 35px;
+
+    }
+
+}
+
+</style>
 
 </head>
 
@@ -596,602 +702,519 @@
 <body>
 
 
-  <main class="catalogo-page">
+<!-- =========================================
+     CABECERA
+========================================= -->
+
+<header class="header">
+
+    <h1>Artesanías Cola Blanca</h1>
+
+    <p>100% costarricense</p>
+
+</header>
 
 
-    <!-- =========================
-         ENCABEZADO
-    ========================= -->
+<!-- =========================================
+     MENÚ
+========================================= -->
 
-    <header class="catalogo-header">
+<nav class="menu">
 
-      <div class="catalogo-logo">
-        Artesanías Cola Blanca
-      </div>
+    <a href="index.html">
+        <span class="heart">♡</span>Inicio
+    </a>
 
-      <p>
-        Macramé hecho a mano en Costa Rica
-      </p>
+    <a href="catalogo.html">
+        <span class="heart">♡</span>Piezas para la casa
+    </a>
 
-    </header>
+    <a href="catalogo-joyeria.html">
+        <span class="heart">♡</span>Joyería / Bisutería
+    </a>
+
+    <a href="catalogo-bolsos.html">
+        <span class="heart">♡</span>Bolsos y piezas artesanales
+    </a>
+
+</nav>
 
 
-    <!-- =========================
-         NAVEGACIÓN
-    ========================= -->
+<!-- =========================================
+     CATÁLOGO BOLSOS
+========================================= -->
 
-    <nav
-      class="catalogo-nav"
-      aria-label="Navegación del catálogo"
-    >
+<main class="catalogo">
 
-      <a href="index.html">
-        Inicio
-      </a>
+    <h2 class="catalogo-titulo">
+        Catálogo
+    </h2>
 
-      <a href="catalogo.html">
-        Piezas para la casa
-      </a>
-
-      <a href="catalogo-joyeria.html">
-        Joyería / Bisutería
-      </a>
-
-      <a href="catalogo-bolsos.html">
+    <p class="catalogo-categoria">
         Bolsos y piezas artesanales
-      </a>
+    </p>
 
-    </nav>
+    <p class="catalogo-instruccion">
 
-
-    <!-- =========================
-         INTRODUCCIÓN
-    ========================= -->
-
-    <section class="catalogo-intro">
-
-      <h1>
-        Bolsos y piezas artesanales
-      </h1>
-
-      <p>
         ¿Quieres conocer más sobre un producto?
-        Haz clic en la fotografía para ver su descripción y precio.
-      </p>
 
-    </section>
+        <br>
 
+        <strong>
+            Haz clic en la fotografía
+        </strong>
 
-    <!-- =========================
-         PRODUCTOS
-    ========================= -->
+        para ver su descripción y precio.
+
+    </p>
+
 
     <section
-      class="productos-grid"
-      aria-label="Bolsos y piezas artesanales"
-    >
+        class="galeria"
+        aria-label="Bolsos y piezas artesanales de macramé">
 
 
-      <!-- PRODUCTO #201 -->
+        <!-- =================================
+             PRODUCTO #201
+        ================================== -->
 
-      <article
-        class="producto-polaroid"
-        data-producto="201"
-        tabindex="0"
-        role="button"
-        aria-label="Ver detalles de Bolso artesanal"
-      >
+        <article
+            class="fotografia"
+            data-producto="201">
 
-        <img
-          class="foto-producto"
-          src="images/productos/bolso-201.jpg"
-          alt="Bolso artesanal de macramé hecho a mano en Costa Rica"
-        >
+            <div class="fotografia-imagen">
 
-        <div class="polaroid-info">
+                <img
+                    src="images/productos/bolso-201.jpg"
+                    alt="Bolso artesanal de macramé hecho a mano en Costa Rica"
+                    loading="lazy"
+                    width="600"
+                    height="600">
 
-          <span class="producto-codigo">
-            #201
-          </span>
+            </div>
 
-          <h2 class="producto-nombre">
-            Bolso artesanal
-          </h2>
+            <div class="fotografia-info">
 
-        </div>
+                <span class="codigo">
+                    #201
+                </span>
 
-      </article>
+                <h3 class="nombre-producto">
+                    Bolso artesanal
+                </h3>
 
+            </div>
 
-      <!-- PRODUCTO #202 -->
-
-      <article
-        class="producto-polaroid"
-        data-producto="202"
-        tabindex="0"
-        role="button"
-        aria-label="Ver detalles de Bolso tejido"
-      >
-
-        <img
-          class="foto-producto"
-          src="images/productos/bolso-202.jpg"
-          alt="Bolso tejido artesanal de macramé"
-        >
-
-        <div class="polaroid-info">
-
-          <span class="producto-codigo">
-            #202
-          </span>
-
-          <h2 class="producto-nombre">
-            Bolso tejido
-          </h2>
-
-        </div>
-
-      </article>
+        </article>
 
 
-      <!-- PRODUCTO #203 -->
+        <!-- =================================
+             PRODUCTO #202
+        ================================== -->
 
-      <article
-        class="producto-polaroid"
-        data-producto="203"
-        tabindex="0"
-        role="button"
-        aria-label="Ver detalles de Pieza artesanal"
-      >
+        <article
+            class="fotografia"
+            data-producto="202">
 
-        <img
-          class="foto-producto"
-          src="images/productos/bolso-203.jpg"
-          alt="Pieza artesanal de macramé hecha a mano"
-        >
+            <div class="fotografia-imagen">
 
-        <div class="polaroid-info">
+                <img
+                    src="images/productos/bolso-202.jpg"
+                    alt="Bolso tejido artesanal de macramé"
+                    loading="lazy"
+                    width="600"
+                    height="600">
 
-          <span class="producto-codigo">
-            #203
-          </span>
+            </div>
 
-          <h2 class="producto-nombre">
-            Pieza artesanal
-          </h2>
+            <div class="fotografia-info">
 
-        </div>
+                <span class="codigo">
+                    #202
+                </span>
 
-      </article>
+                <h3 class="nombre-producto">
+                    Bolso tejido
+                </h3>
+
+            </div>
+
+        </article>
 
 
-      <!-- PRODUCTO #204 -->
+        <!-- =================================
+             PRODUCTO #203
+        ================================== -->
 
-      <article
-        class="producto-polaroid"
-        data-producto="204"
-        tabindex="0"
-        role="button"
-        aria-label="Ver detalles de Accesorio artesanal"
-      >
+        <article
+            class="fotografia"
+            data-producto="203">
 
-        <img
-          class="foto-producto"
-          src="images/productos/bolso-204.jpg"
-          alt="Accesorio artesanal de macramé hecho a mano"
-        >
+            <div class="fotografia-imagen">
 
-        <div class="polaroid-info">
+                <img
+                    src="images/productos/bolso-203.jpg"
+                    alt="Pieza artesanal de macramé hecha a mano"
+                    loading="lazy"
+                    width="600"
+                    height="600">
 
-          <span class="producto-codigo">
-            #204
-          </span>
+            </div>
 
-          <h2 class="producto-nombre">
-            Accesorio artesanal
-          </h2>
+            <div class="fotografia-info">
 
-        </div>
+                <span class="codigo">
+                    #203
+                </span>
 
-      </article>
+                <h3 class="nombre-producto">
+                    Pieza artesanal
+                </h3>
+
+            </div>
+
+        </article>
+
+
+        <!-- =================================
+             PRODUCTO #204
+        ================================== -->
+
+        <article
+            class="fotografia"
+            data-producto="204">
+
+            <div class="fotografia-imagen">
+
+                <img
+                    src="images/productos/bolso-204.jpg"
+                    alt="Accesorio artesanal de macramé hecho a mano"
+                    loading="lazy"
+                    width="600"
+                    height="600">
+
+            </div>
+
+            <div class="fotografia-info">
+
+                <span class="codigo">
+                    #204
+                </span>
+
+                <h3 class="nombre-producto">
+                    Accesorio artesanal
+                </h3>
+
+            </div>
+
+        </article>
 
 
     </section>
 
+</main>
 
-    <!-- =========================
-         MODAL
-    ========================= -->
 
-    <div
-      class="modal-producto"
-      id="modalProducto"
-      aria-hidden="true"
-    >
+<!-- =========================================
+     MODAL
+========================================= -->
 
-      <div
-        class="modal-contenido"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="modalNombre"
-      >
+<div
+    class="modal"
+    id="modalProducto"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modalNombre">
+
+
+    <div class="modal-contenido">
+
 
         <button
-          class="modal-cerrar"
-          id="cerrarModal"
-          aria-label="Cerrar"
-        >
-          &times;
+            class="cerrar"
+            id="cerrarModal"
+            aria-label="Cerrar">
+
+            ×
+
         </button>
 
 
-        <div class="modal-grid">
+        <div class="modal-producto">
 
 
-          <img
-            id="modalImagen"
-            class="modal-imagen"
-            src=""
-            alt=""
-          >
+            <img
+                id="modalImagen"
+                src=""
+                alt="">
 
 
-          <div>
+            <div class="modal-info">
 
 
-            <div
-              id="modalCodigo"
-              class="modal-codigo"
-            ></div>
+                <span
+                    class="modal-codigo"
+                    id="modalCodigo">
+                </span>
 
 
-            <h2
-              id="modalNombre"
-              class="modal-nombre"
-            ></h2>
+                <h2 id="modalNombre">
+                </h2>
 
 
-            <p
-              id="modalDescripcion"
-              class="modal-descripcion"
-            ></p>
+                <p id="modalDescripcion">
+                </p>
 
 
-            <div
-              id="modalPrecio"
-              class="modal-precio"
-            ></div>
+                <div
+                    class="modal-precio"
+                    id="modalPrecio">
+                </div>
 
 
-            <a
-              id="botonComprar"
-              class="boton-comprar"
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              COMPRAR
-            </a>
+                <a
+                    class="comprar"
+                    id="botonComprar"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    Comprar
+
+                </a>
 
 
-          </div>
+            </div>
 
 
         </div>
 
-      </div>
 
     </div>
 
-
-    <!-- =========================
-         FOOTER
-    ========================= -->
-
-    <footer class="catalogo-footer">
-
-      <p>
-        Artesanías Cola Blanca · Hecho a mano en Costa Rica
-      </p>
-
-    </footer>
+</div>
 
 
-  </main>
+<!-- =========================================
+     PIE DE PÁGINA
+========================================= -->
+
+<footer>
+
+    <h3>
+        Artesanías Cola Blanca
+    </h3>
+
+    <p>
+        Artesanías de macramé hechas a mano en Costa Rica.
+    </p>
+
+    © 2026 Artesanías Cola Blanca
+
+</footer>
 
 
-  <!-- =========================
-       JAVASCRIPT
-  ========================= -->
+<script>
 
-  <script>
+/* =========================================
+   INFORMACIÓN DE LOS PRODUCTOS
+========================================= */
 
+const productos = {
 
-    const productos = {
-
-
-      "201": {
-
-        codigo: "#201",
+    "201": {
 
         nombre: "Bolso artesanal",
 
-        imagen: "images/productos/bolso-201.jpg",
-
-        alt:
-          "Bolso artesanal de macramé hecho a mano en Costa Rica",
-
         descripcion:
-          "Bolso elaborado artesanalmente en macramé, pensado para combinar funcionalidad y diseño hecho a mano.",
+            "Bolso elaborado artesanalmente en macramé, pensado para combinar funcionalidad y diseño hecho a mano.",
 
-        precio: "₡15.000"
+        precio: "₡15.000",
 
-      },
+        imagen:
+            "images/productos/bolso-201.jpg"
+
+    },
 
 
-      "202": {
-
-        codigo: "#202",
+    "202": {
 
         nombre: "Bolso tejido",
 
-        imagen: "images/productos/bolso-202.jpg",
-
-        alt:
-          "Bolso tejido artesanal de macramé",
-
         descripcion:
-          "Pieza tejida a mano con técnicas de macramé para acompañar diferentes estilos y ocasiones.",
+            "Pieza tejida a mano con técnicas de macramé para acompañar diferentes estilos y ocasiones.",
 
-        precio: "₡18.000"
+        precio: "₡18.000",
 
-      },
+        imagen:
+            "images/productos/bolso-202.jpg"
+
+    },
 
 
-      "203": {
-
-        codigo: "#203",
+    "203": {
 
         nombre: "Pieza artesanal",
 
-        imagen: "images/productos/bolso-203.jpg",
-
-        alt:
-          "Pieza artesanal de macramé hecha a mano",
-
         descripcion:
-          "Pieza artesanal elaborada a mano, ideal para quienes buscan objetos únicos y hechos con dedicación.",
+            "Pieza artesanal elaborada a mano, ideal para quienes buscan objetos únicos y hechos con dedicación.",
 
-        precio: "₡12.500"
+        precio: "₡12.500",
 
-      },
+        imagen:
+            "images/productos/bolso-203.jpg"
+
+    },
 
 
-      "204": {
-
-        codigo: "#204",
+    "204": {
 
         nombre: "Accesorio artesanal",
 
-        imagen: "images/productos/bolso-204.jpg",
-
-        alt:
-          "Accesorio artesanal de macramé hecho a mano",
-
         descripcion:
-          "Accesorio artesanal elaborado en macramé para complementar tu estilo con una pieza hecha a mano.",
+            "Accesorio artesanal elaborado en macramé para complementar tu estilo con una pieza hecha a mano.",
 
-        precio: "₡9.500"
+        precio: "₡9.500",
 
-      }
-
-
-    };
-
-
-    const modal =
-      document.getElementById("modalProducto");
-
-
-    const cerrarModal =
-      document.getElementById("cerrarModal");
-
-
-    const modalImagen =
-      document.getElementById("modalImagen");
-
-
-    const modalCodigo =
-      document.getElementById("modalCodigo");
-
-
-    const modalNombre =
-      document.getElementById("modalNombre");
-
-
-    const modalDescripcion =
-      document.getElementById("modalDescripcion");
-
-
-    const modalPrecio =
-      document.getElementById("modalPrecio");
-
-
-    const botonComprar =
-      document.getElementById("botonComprar");
-
-
-    function abrirProducto(codigo) {
-
-
-      const producto =
-        productos[codigo];
-
-
-      if (!producto) {
-
-        return;
-
-      }
-
-
-      modalImagen.src =
-        producto.imagen;
-
-
-      modalImagen.alt =
-        producto.alt;
-
-
-      modalCodigo.textContent =
-        producto.codigo;
-
-
-      modalNombre.textContent =
-        producto.nombre;
-
-
-      modalDescripcion.textContent =
-        producto.descripcion;
-
-
-      modalPrecio.textContent =
-        producto.precio;
-
-
-      const mensaje =
-        `Hola, me interesa el producto ${producto.codigo} - ${producto.nombre}. ¿Está disponible?`;
-
-
-      botonComprar.href =
-        `https://wa.me/50664448517?text=${encodeURIComponent(mensaje)}`;
-
-
-      modal.classList.add("activo");
-
-
-      modal.setAttribute(
-        "aria-hidden",
-        "false"
-      );
-
-
-      document.body.style.overflow =
-        "hidden";
+        imagen:
+            "images/productos/bolso-204.jpg"
 
     }
 
-
-    function cerrarProducto() {
-
-
-      modal.classList.remove("activo");
+};
 
 
-      modal.setAttribute(
-        "aria-hidden",
-        "true"
-      );
+/* =========================================
+   ELEMENTOS
+========================================= */
+
+const fotografias =
+    document.querySelectorAll(".fotografia");
+
+const modal =
+    document.getElementById("modalProducto");
+
+const cerrarModal =
+    document.getElementById("cerrarModal");
+
+const modalImagen =
+    document.getElementById("modalImagen");
+
+const modalCodigo =
+    document.getElementById("modalCodigo");
+
+const modalNombre =
+    document.getElementById("modalNombre");
+
+const modalDescripcion =
+    document.getElementById("modalDescripcion");
+
+const modalPrecio =
+    document.getElementById("modalPrecio");
+
+const botonComprar =
+    document.getElementById("botonComprar");
 
 
-      document.body.style.overflow =
-        "";
+/* =========================================
+   ABRIR PRODUCTO
+========================================= */
+
+fotografias.forEach(fotografia => {
+
+    fotografia.addEventListener("click", () => {
+
+
+        const codigo =
+            fotografia.dataset.producto;
+
+
+        const producto =
+            productos[codigo];
+
+
+        modalImagen.src =
+            producto.imagen;
+
+        modalImagen.alt =
+            producto.nombre;
+
+
+        modalCodigo.textContent =
+            "#" + codigo;
+
+
+        modalNombre.textContent =
+            producto.nombre;
+
+
+        modalDescripcion.textContent =
+            producto.descripcion;
+
+
+        modalPrecio.textContent =
+            producto.precio;
+
+
+        const mensaje =
+            `Hola, me interesa el producto #${codigo} - ${producto.nombre}. ¿Está disponible?`;
+
+
+        botonComprar.href =
+            `https://wa.me/50664448517?text=${encodeURIComponent(mensaje)}`;
+
+
+        modal.classList.add("abierto");
+
+
+    });
+
+});
+
+
+/* =========================================
+   CERRAR
+========================================= */
+
+cerrarModal.addEventListener("click", () => {
+
+    modal.classList.remove("abierto");
+
+});
+
+
+/* =========================================
+   CERRAR AL HACER CLIC FUERA
+========================================= */
+
+modal.addEventListener("click", (e) => {
+
+    if (e.target === modal) {
+
+        modal.classList.remove("abierto");
 
     }
 
-
-    document
-      .querySelectorAll(".producto-polaroid")
-      .forEach(producto => {
+});
 
 
-        producto.addEventListener(
-          "click",
-          () => {
+/* =========================================
+   CERRAR CON ESC
+========================================= */
 
-            abrirProducto(
-              producto.dataset.producto
-            );
+document.addEventListener("keydown", (e) => {
 
-          }
-        );
+    if (e.key === "Escape") {
 
+        modal.classList.remove("abierto");
 
-        producto.addEventListener(
-          "keydown",
-          event => {
+    }
 
+});
 
-            if (
-              event.key === "Enter" ||
-              event.key === " "
-            ) {
-
-
-              event.preventDefault();
-
-
-              abrirProducto(
-                producto.dataset.producto
-              );
-
-            }
-
-
-          }
-        );
-
-
-      });
-
-
-    cerrarModal.addEventListener(
-      "click",
-      cerrarProducto
-    );
-
-
-    modal.addEventListener(
-      "click",
-      event => {
-
-
-        if (
-          event.target === modal
-        ) {
-
-          cerrarProducto();
-
-        }
-
-
-      }
-    );
-
-
-    document.addEventListener(
-      "keydown",
-      event => {
-
-
-        if (
-          event.key === "Escape" &&
-          modal.classList.contains("activo")
-        ) {
-
-          cerrarProducto();
-
-        }
-
-
-      }
-    );
-
-
-  </script>
+</script>
 
 
 </body>
 
 </html>
-```
